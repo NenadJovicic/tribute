@@ -1,6 +1,6 @@
 {
   "name": "nenad-tributejs",
-  "version": "3.0.3.1",
+  "version": "3.0.4",
   "description": "Edited tributejs package to work with shadowed DOM elements. Fixed problem for polymer element.",
   "main": "dist/tribute.js",
   "devDependencies": {
