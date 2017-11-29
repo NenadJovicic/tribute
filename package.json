@@ -1,7 +1,7 @@
 {
-  "name": "tributejs",
+  "name": "nenad-tributejs",
   "version": "3.0.3",
-  "description": "Native ES6 @mentions",
+  "description": "Edited tributejs package to work with shadowed DOM elements. Fixed problem for polymer element.",
   "main": "dist/tribute.js",
   "devDependencies": {
     "babel-cli": "~6.0.0",

@@ -262,7 +262,7 @@ class Tribute {
 
     showMenuForCollection(element, collectionIndex) {
         if (element !== document.activeElement) {
-            this.placeCaretAtEnd(element)
+            element.focus();
         }
 
         this.current.collection = this.collection[collectionIndex || 0]
@@ -276,25 +276,7 @@ class Tribute {
 
         this.showMenuFor(element)
     }
-
-    // TODO: make sure this works for inputs/textareas
-    placeCaretAtEnd(el) {
-        el.focus();
-        if (typeof window.getSelection != "undefined"
-                && typeof document.createRange != "undefined") {
-            var range = document.createRange();
-            range.selectNodeContents(el);
-            range.collapse(false);
-            var sel = window.getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-        } else if (typeof document.body.createTextRange != "undefined") {
-            var textRange = document.body.createTextRange();
-            textRange.moveToElementText(el);
-            textRange.collapse(false);
-            textRange.select();
-        }
-    }
+   
 
     // for contenteditable
     insertTextAtCursor(text) {
