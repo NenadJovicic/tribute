@@ -269,10 +269,11 @@ class Tribute {
         this.current.externalTrigger = true
         this.current.element = element
 
-        if (element.isContentEditable)
-            this.insertTextAtCursor(this.current.collection.trigger)
-        else
-            this.insertAtCaret(element, this.current.collection.trigger)
+        // under comment because in IE 11 element.isContentEditable is true, and it should be false
+        // if (element.isContentEditable)
+        //     this.insertTextAtCursor(this.current.collection.trigger)
+        // else
+        this.insertAtCaret(element, this.current.collection.trigger)
 
         this.showMenuFor(element)
     }

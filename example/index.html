@@ -26,6 +26,11 @@
         display: block;
         color: #ccc;
       }
+
+      .btn {
+        border: 1px solid gray;
+        padding: 5px;
+      }
     </style>
   </head>
   <body>
@@ -63,6 +68,7 @@
             <div class="large-12 columns">
               <label>Textarea Label</label>
               <textarea id="testarea" placeholder="Enter some text here"></textarea>
+              <button id="mention-btn" onclick="activateTribute()" type="button" class="btn btn-default">Activate tribute</button>
             </div>
           </div>
         </form>
@@ -91,6 +97,10 @@
       tribute.attach(document.getElementById('test'));
       tribute.attach(document.getElementById('testInput'));
       tribute.attach(document.getElementById('testarea'));
+
+      function activateTribute() {
+        tribute.showMenuForCollection(document.getElementById('testarea'));
+      }
 
       var tributeMultipleTriggers = new Tribute({
         collection: [{
